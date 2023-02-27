@@ -1,0 +1,61 @@
+from tkinter import *
+from tkinter import messagebox
+
+def button_p():
+  messagebox.showinfo('Результат', float(a.get())+float(b.get()))
+
+def button_m():
+  messagebox.showinfo('Результат', float(a.get())-float(b.get()))
+
+def button_u():
+  messagebox.showinfo('Результат', float(a.get())*float(b.get()))
+
+def button_d():
+  messagebox.showinfo('Результат', float(a.get())/float(b.get()))
+
+def button_cd():
+  messagebox.showinfo('Результат', int(a.get())//int(b.get()))
+
+def button_od():
+  messagebox.showinfo('Результат', float(a.get())%float(b.get()))
+
+root=Tk()
+root.title('Приложение')
+root.geometry('400x350')
+root.resizable(False, False)
+
+a=Entry(
+    root, 
+    width=12,
+    fg='black',
+    font='consolas'
+)
+a.place(relx = 0.56, rely = 0.2)
+
+b = Entry(
+    root, 
+    width=12, 
+    fg='black', 
+    font='consolas'
+)
+b.place(relx = 0.19, rely = 0.2)
+
+but_p = Button(root, text='+', width=15, height=3, command=button_p, bg = 'gray',fg = 'white')
+but_p.place(relx = 0.19, rely = 0.3)
+
+but_m = Button(root, text='-', width=15, height=3, command=button_m, bg = 'gray',fg = 'white')
+but_m.place(relx = 0.19, rely = 0.5)
+
+but_u = Button(root, text='*', width=15, height=3, command=button_u, bg = 'gray',fg = 'white')
+but_u.place(relx = 0.19, rely = 0.7)
+
+but_d = Button(root, text='/', width=15, height=3, command=button_d, bg = 'gray',fg = 'white')
+but_d.place(relx = 0.56, rely = 0.3)
+
+but_cd = Button(root, text='//', width=15, height=3, command=button_cd, bg = 'gray', fg = 'white')
+but_cd.place(relx = 0.56, rely = 0.5)
+
+but_od = Button(root, text='%', width=15, height=3, command=button_od, bg = 'gray',fg = 'white')
+but_od.place(relx = 0.56, rely = 0.7)
+
+root.mainloop()
